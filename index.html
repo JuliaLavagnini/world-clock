@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <main>
+        <div class="container">
+            <div class="selector">
+                <label for="countries">Select a city from the list</label>
+                <select id="countries">
+                    <option value="">Select a city</option>
+                    <option value="Brazil/East">Sao Paulo, Brazil</option>
+                    <option value="Europe/London">London, England</option>
+                    <option value="Asia/Seoul">Seoul, South Korea</option>
+                    <option value="Asia/Bangkok">Bangkok, Thailand</option>
+                </select>
+            </div>
+            <div class="clocks">
+                <div id="date"></div>
+            </div>
+        </div>
     </main>
+    <footer>
+        <small>Created my Julia Lavagnini and hosted on Netlify</small>
+    </footer>
 
     <script src="main.js"></script>
 </body>

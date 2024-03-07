@@ -6,7 +6,6 @@ function displayDateTime(event){
 
         let date = document.querySelector('#date');
         date.innerHTML = currentTime;
-        alert(currentTime)
     };
 };
 

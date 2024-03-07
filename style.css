@@ -1,6 +1,61 @@
+body{
+    background-color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,h2{
+    font-weight: bold;
+}
+
+h1{
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+h2{
+    margin: 0 0 3px;
+    font-size: 30px;
+}
 .container{
-    height: 600px;
-    width: 700px;
-    border: 1px solid black;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+select{
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.heading{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.city{
+    display: flex;
+    justify-content: space-between;
+    margin:20px 0;
+    padding: 20px 10px;
+    border-bottom: 1px dotted gray;
+}
+
+.city:last-child{
+    border: none;
+}
+
+.zoneTime{
+    opacity: 0.7;
+}
+.time, .timeHead{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
 }

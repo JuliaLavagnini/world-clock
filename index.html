@@ -12,35 +12,21 @@
     <main>
         <div class="container">
             <h1>World Clock</h1>
-            <div class="selector">
-                <select id="countries">
+                <select id="city">
                     <option value="">Select a city...</option>
                     <option value="Brazil/East">Sao Paulo, Brazil</option>
                     <option value="Europe/London">London, England</option>
                     <option value="Asia/Seoul">Seoul, South Korea</option>
                     <option value="Asia/Bangkok">Bangkok, Thailand</option>
                 </select>
-            </div>
-            <div class="heading">
-                <div class="timeHead">3:54:04 PM</div>
-                <h2 id="location">London</h2>
-                <small id="zoneTime">Greenwich Mean Time</small>
-            </div>
-            <div class="clocks">
-                <div class="city" id="city">
-                    <div>
-                        <h2>Liverpool </h2>
-                        <small class="zoneTime">0 Hrs ahead, Today</small>    
-                    </div>
-                    <div class="time" id="time">4:20:20 PM</div>
+            <div class="heading" id="location">
+                <div class="timeHead">
+                    <h2 id="localName"></h2>
+                    <div class="time" id="localtime"></div>
                 </div>
-                <div class="city" id="city">
-                    <div>
-                        <h2>Liverpool</h2>
-                        <small class="zoneTime">0 Hrs ahead, Today</small>    
-                    </div>
-                    <div class="time" id="time">4:20:20 PM</div>
-                </div>
+                <small class="utc"></small>
+            </div>
+            <div id="clocks">
             </div>
         </div>
     </main>

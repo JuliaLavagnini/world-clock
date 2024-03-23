@@ -1,6 +1,7 @@
 body{
-    background-color: antiquewhite;
+    background: linear-gradient(110.5deg, rgba(248, 196, 249, 0.66) 22.8%, rgba(253, 122, 4, 0.15) 64.6%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #36454F;
 }
 
 h1,h2{
@@ -20,7 +21,8 @@ h2{
 .container{
     max-width: 600px;
     margin: 60px auto;
-    background: white;
+    background: #F8F8FF;
+    box-shadow: 10px 10px 26px rgba(13, 57, 249, 0.1);
     padding: 30px;
     border-radius: 10px;
 }
@@ -57,5 +59,6 @@ select{
 }
 
 footer{
+    margin-top: -40px;
     text-align: center;
 }

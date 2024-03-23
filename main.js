@@ -19,7 +19,6 @@ let cities = [
     { name: 'Toronto', timezone: 'America/Toronto' },
     { name: 'London', timezone: 'Europe/London' },
     { name: 'Sydney', timezone: 'Australia/Sydney' },
-    { name: 'Tokyo', timezone: 'Asia/Tokyo' }
 ];
 
 
@@ -69,6 +68,9 @@ setInterval(updateCityTimes, 1000);
 
 function selectionCity(event, offsetString){
 let selectCityElement = event.target.value;
+if (selectCityElement === 'current'){
+    selectCityElement = moment.tz.guess();
+}
 let cityZone = moment().tz(selectCityElement);
 let cityName = selectCityElement.replace("_", " ").split("/")[1];
 let headingCity = document.querySelector('#location');

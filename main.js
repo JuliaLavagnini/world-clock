@@ -67,3 +67,33 @@ function getTimezoneOffsetString(cityName) {
 // Update city times every second
 setInterval(updateCityTimes, 1000);
 
+function selectionCity(event, offsetString){
+let selectCityElement = event.target.value;
+let cityZone = moment().tz(selectCityElement);
+let cityName = selectCityElement.replace("_", " ").split("/")[1];
+let headingCity = document.querySelector('#location');
+
+let offsetMinutes = cityZone.utcOffset();
+// Convert the offset to hours and minutes
+let [offsetHours, offsetMinutesRemainder] = [Math.abs(offsetMinutes / 60), Math.abs(offsetMinutes % 60)];
+// Determine if the offset is ahead or behind
+let plusMinesTime = (offsetMinutes >= 0 ? 'ahead' : 'behind');
+// Determine if the current time is already tomorrow
+let isTomorrow = cityZone.isSame(moment().add(1, 'days').startOf('day'), 'day');
+// Build the offset string with the desired format
+let offsetStringHead = `${offsetHours}:${(offsetMinutesRemainder < 10 ? '0' : '')}${offsetMinutesRemainder} Hrs ${plusMinesTime}, ${isTomorrow ? 'Tomorrow' : 'Today'}`;
+
+headingCity.innerHTML = `<div class="timeHead">
+                    <h2 id="localName">${cityName}</h2>
+                    <div class="time" id="localtime">${cityZone.format(
+                      "h:mm"
+                    )} <small>${cityZone.format(
+  "A"
+)}</small></div>
+                </div>
+                <small class="zoneTime">${offsetStringHead}</small>`;
+}
+
+let citySelectElement = document.querySelector('#city');
+citySelectElement.addEventListener('change', selectionCity);
+selectionCity();
